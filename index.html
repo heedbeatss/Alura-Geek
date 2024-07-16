@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Geek</title>
+    <link rel="stylesheet" href="stylization.css">
+</head>
+<body>
+    <header class="header__class">
+        <img class="header__img" src="/assets/Logo.png" alt="Logo Alura Geek">
+    </header>
+    <main>
+        <section class="main__left__right">
+            <div class="main__left">
+                <h1 class="main__left__title">Meus Produtos:</h1>
+                <div class="main__left__produtos"></div>
+            </div>
+            <section class="main__right"> 
+                <h1 class="main__right__title">Adicionar <br> Produto:</h1>
+                <div class="main__right__form">
+                    <form class="form" action="#" method="post">
+                        <label for="nome"></label>
+                        <input type="text" placeholder="nome..." id="nome" name="nome" required>
+                        
+                        <label for="preco"></label>
+                        <input type="number" placeholder="preço..." id="preco" name="preco" step="0.01" required>
+                        
+                        <label for="imagem"></label>
+                        <input type="file" id="imagem" name="imagem" accept="image/*" style="display:none;" required>
+                        <div class="custom-file-upload">
+                            <input type="text" id="file-placeholder" placeholder="imagem..." readonly>
+                            <button type="button" class="custom-button" onclick="document.getElementById('imagem').click();">Selecionar Imagem</button>
+                        </div>
+                        
+                        <div class="button-container">
+                            <button type="submit" class="custom-button__guardar">Guardar</button>
+                            <button type="reset" class="custom-button">Limpar</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer__div">
+            <img class="footer__img" src="/assets/Logo.png" alt="Logo Alura Geek">
+            <div class="footer__text">
+                <h1>Desenvolvido por André Moreno!</h1>
+                <p>Alura Latam - 2024</p>
+            </div>    
+        </div>
+    </footer>
+    <script src="uploadImg.js"></script>
+    <script src="js/js.js"></script>
+    <script src="js/post.js"></script>
+    <script src="js/delete.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Skate 3",
+      "price": 150,
+      "image": "./assets/skate3.jpg",
+      "alt": "Capa do jogo Skate 3"
+    },
+    {
+      "id": "2",
+      "name": "Mortal Kombat 9",
+      "price": 120,
+      "image": "./assets/mortalkombat9.jpg",
+      "alt": "Capa do jogo Mortal Kombat 9"
+    },
+    {
+      "id": "3",
+      "name": "Gears of War 2",
+      "price": 130,
+      "image": "./assets/gearsofwar2.jpg",
+      "alt": "Capa do jogo Gears of War 2"
+    },
+    {
+      "id": "4",
+      "name": "Blur",
+      "price": 90,
+      "image": "./assets/blur.jpg",
+      "alt": "Capa do jogo Blur"
+    },
+    {
+      "id": "5",
+      "name": "Call of Duty: Modern Warfare 2",
+      "price": 135,
+      "image": "./assets/codmw2.jpg",
+      "alt": "Capa do jogo COD:MW2"
+    },
+    {
+      "id": "6",
+      "name": "Grand Theft Auto V",
+      "price": 149,
+      "image": "./assets/gtav.jpg",
+      "alt": "Capa do jogo GTA V"
+    },
+    {
+      "id": "7",
+      "name": "Far Cry 3",
+      "price": 110,
+      "image": "./assets/farcry3.jpg",
+      "alt": "Capa do jogo Far Cry 3"
+    },
+    {
+      "id": "8",
+      "name": "Forza Motosport 3",
+      "price": 120,
+      "image": "./assets/forza3.jpeg",
+      "alt": "Capa do jogo Forza Motosport 3"
+    },
+    {
+      "id": "9",
+      "name": "Bully",
+      "price": 90,
+      "image": "./assets/bully.jpg",
+      "alt": "Capa do filme Bully"
+    }
+  ]
+}

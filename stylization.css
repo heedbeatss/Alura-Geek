@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root{
+    --cor-primaria: #5300C8; /* Roxo */
+    --cor-secundaria: #03318C; /* Azul */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.header {
+    width: 100%;
+    height: 20%;
+}
+
+.header__class {
+    background-color: var(--cor-primaria);
+}
+
+.header__img {
+    padding-left: 38%;
+}
+
+.main__left__right {
+    margin-top: 6%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.main__left {
+    height: 100vh;
+    width: 50vw;
+}
+
+.main__left__title {
+    font-family: "Press Start 2P", system-ui;
+}
+
+.main__left__produtos {
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.card {
+    width: 150px;
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card__container__info {
+    padding: 10px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+}
+
+.card__container__value {
+    margin: 0;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+}
+
+.card__container__svalue {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.card__container__svalue p {
+    margin: 0;
+}
+
+.card__container__svalue img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.main__right {
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__right__title {
+    margin-left: 15%;
+    font-family: "Press Start 2P", system-ui;
+    align-self: center;
+}
+
+.main__right__form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="number"] {
+    margin-top: 10%; /* Margem */
+    border-radius: 20px; /* Borda arredondada */
+    border: 2px solid var(--cor-secundaria); /* Contorno azul */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: white; /* Cor de fundo */
+    color: black; /* Cor do texto */
+    cursor: text; /* Cursor text */
+    width: 100%; /* Largura total */
+    box-sizing: border-box; /* Para incluir padding e border na largura */
+}
+
+input::placeholder {
+    color: #03318C; /* Cor do placeholder */
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+}
+
+.custom-file-upload {
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.custom-file-upload input[type="text"] {
+    flex-grow: 1;
+    margin-right: 5%;
+}
+
+.custom-button, .custom-button__guardar {
+    border-radius: 12px; /* Borda arredondada */
+    border: 2px solid var(--cor-secundaria); /* Contorno azul */
+    padding: 10px 20px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor pointer */
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
+    width: 45%; /* Largura */
+}
+
+.custom-button {
+    background-color: white; /* Cor de fundo */
+    color: var(--cor-secundaria); /* Cor do texto */
+    margin-top: 10%; /* Margem */
+}
+
+.custom-button__guardar {
+    background-color: var(--cor-secundaria); /* Cor de fundo */
+    color: white; /* Cor do texto */
+    margin-left: 5%; /* Margem */
+}
+
+.custom-button:hover {
+    background-color: white; /* Cor de fundo ao passar o mouse */
+    color: red; /* Cor do texto ao passar o mouse */
+}
+
+.custom-button__guardar:hover {
+    background-color: green; /* Cor de fundo ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
+    border: 2px solid green;
+}
+
+.footer__div {
+    background-color: var(--cor-primaria);
+}
+
+.footer__img {
+    padding-left: 38%;
+}
+
+.footer__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__text > h1 {
+    font-size: large;
+}
+
+.footer__text > p {
+    font-size: smaller;
+    margin-top: 0.5%;
+} 
