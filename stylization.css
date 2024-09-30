@@ -18,7 +18,7 @@ body {
 }
 
 .header {
-    width: 100%;
+    width: auto;
     height: 20%;
 }
 
@@ -30,6 +30,13 @@ body {
     padding-left: 38%;
 }
 
+.main__div {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 20px;
+    
+}
+
 .main__left__right {
     margin-top: 6%;
     display: flex;
@@ -39,19 +46,21 @@ body {
 
 .main__left {
     height: 100vh;
-    width: 50vw;
+    width: 50%;
 }
 
 .main__left__title {
     font-family: "Press Start 2P", system-ui;
+    margin-bottom: 20px;
 }
 
 .main__left__produtos {
-    height: 50vh;
+    height: 70vh;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     overflow-y: auto;
+    margin-right: 20px;
 }
 
 .card {
@@ -101,7 +110,7 @@ body {
 
 .main__right {
     height: 100vh;
-    width: 50vw;
+    width: 50%;
     display: flex;
     flex-direction: column;
 }
@@ -205,4 +214,5 @@ input::placeholder {
 .footer__text > p {
     font-size: smaller;
     margin-top: 0.5%;
+    padding-bottom: 10px;
 } 

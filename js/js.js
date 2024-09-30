@@ -1,17 +1,17 @@
 async function fetchProducts() {
     try {
-        const response = await fetch('http://localhost:3000/products'); // URL do seu servidor JSON
+        const response = await fetch('http://localhost:3000/products'); // Caminho para a API REST
         if (!response.ok) {
             throw new Error('Não foi possível carregar os produtos. Código de status: ' + response.status);
         }
-        const products = await response.json();
-        const produtosContainer = document.querySelector('.main__left__produtos');
+        const products = await response.json();  // A resposta já é um array de produtos
 
+        const produtosContainer = document.querySelector('.main__left__produtos');
         if (!produtosContainer) {
             throw new Error('Elemento .main__left__produtos não encontrado no DOM.');
         }
 
-        produtosContainer.innerHTML = ''; // Limpar o conteúdo atual
+        produtosContainer.innerHTML = ''; // Limpa o conteúdo atual
 
         products.forEach(product => {
             const card = `
@@ -32,5 +32,5 @@ async function fetchProducts() {
     }
 }
 
-// Chame a função para carregar os produtos ao carregar a página
+// Chama a função para carregar os produtos ao carregar a página
 document.addEventListener('DOMContentLoaded', fetchProducts);
