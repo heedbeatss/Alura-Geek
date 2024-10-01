@@ -132,7 +132,7 @@ body {
     flex-direction: column;
 }
 
-input[type="text"], input[type="number"] {
+input[type="text"], input[type="number"], input[type="url"] {
     margin-top: 10%; /* Margem */
     border-radius: 20px; /* Borda arredondada */
     border: 2px solid var(--cor-secundaria); /* Contorno azul */

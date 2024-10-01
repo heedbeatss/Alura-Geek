@@ -90,6 +90,20 @@
       "price": 180,
       "image": "https://m.media-amazon.com/images/I/717xWSvPL6L._AC_UF1000,1000_QL80_.jpg",
       "alt": "Capa do produto Tekken 7"
+    },
+    {
+      "id": 14,
+      "name": "Naruto Ultimate Ninja Storm 4 ",
+      "price": 90,
+      "image": "https://m.media-amazon.com/images/I/81I4IWadtbL.jpg",
+      "alt": "Capa do produto Naruto Ultimate Ninja Storm 4 "
+    },
+    {
+      "id": 15,
+      "name": "Empire of Sins",
+      "price": 150,
+      "image": "https://m.media-amazon.com/images/I/81d-WswH3oL._AC_UF1000,1000_QL80_.jpg",
+      "alt": "Capa do produto Empire of Sins"
     }
   ]
 }
