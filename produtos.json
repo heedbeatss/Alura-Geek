@@ -104,6 +104,27 @@
       "price": 150,
       "image": "https://m.media-amazon.com/images/I/81d-WswH3oL._AC_UF1000,1000_QL80_.jpg",
       "alt": "Capa do produto Empire of Sins"
+    },
+    {
+      "id": 16,
+      "name": "EA SPORTS UFC 3",
+      "price": 85,
+      "image": "https://cdn.awsli.com.br/800x800/1821/1821195/produto/156452309/be7327b381.jpg",
+      "alt": "Capa do produto EA SPORTS UFC 3"
+    },
+    {
+      "id": 17,
+      "name": "Left 4 Dead 2",
+      "price": 15,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN9lCyJWZIraK7pk0vm7i3Ac95JNacQ8rbBw&s",
+      "alt": "Capa do produto Left 4 Dead 2"
+    },
+    {
+      "id": 18,
+      "name": "Mortal Kombat 11",
+      "price": 165,
+      "image": "https://m.media-amazon.com/images/I/61JW9Dh-kuL._AC_UF1000,1000_QL80_.jpg",
+      "alt": "Capa do produto Mortal Kombat 11"
     }
   ]
 }

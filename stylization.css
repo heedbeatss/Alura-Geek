@@ -216,3 +216,119 @@ input::placeholder {
     margin-top: 0.5%;
     padding-bottom: 10px;
 } 
+
+
+/* Estilos gerais para telas menores */
+@media (max-width: 768px) {
+
+    .header__img{
+        margin-left: 50px;
+
+    }
+    
+    .main__div {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main__left__right {
+        flex-direction: column; /* Muda a direção para coluna em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .main__left, .main__right {
+        width: 100%; /* Usa 100% da largura em telas pequenas */
+        height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    }
+
+    .main__left__title {
+        margin-left: 50px;
+    }
+
+    .main__left__produtos {
+        height: auto; /* Ajusta a altura para caber o conteúdo */
+        overflow-y: hidden; /* Esconde o overflow para não mostrar scroll */
+        margin-left: 50px;
+    }
+
+    .card {
+        width: 90%; /* Largura maior para cartões em telas menores */
+        max-width: 300px; /* Limita a largura máxima dos cartões */
+    }
+
+    .main__right__form {
+        margin-top: 10%; /* Reduz a margem em relação ao topo */
+    }
+
+    .main__right__title {
+        margin-top: 35px;
+        margin-right: 25px;
+    }
+
+    .button-container {
+        margin-bottom: 35px;
+    }
+
+    input[type="text"], input[type="number"], input[type="url"],
+    .custom-button, .custom-button__guardar {
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+        padding: 8px 10px; /* Reduz o padding para melhor ajuste */
+    }
+
+    .header__img {
+        padding-left: 10%; /* Reduz o padding à esquerda da imagem do cabeçalho */
+        width: 70%; /* Ajusta a largura da imagem */
+    }
+
+    .footer__img {
+        padding-left: 10%; /* Reduz o padding à esquerda da imagem do rodapé */
+        width: 70%; /* Ajusta a largura da imagem */
+    }
+
+    .footer__text > h1 {
+        font-size: medium; /* Ajusta o tamanho do texto do rodapé */
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    
+
+    .main__div {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .main__left__right {
+        flex-direction: row; /* Mantém a direção como linha em tablets */
+        justify-content: space-between; /* Distribui espaço entre as colunas */
+    }
+
+    .main__left__title {
+        margin-bottom: 50px;
+    }
+
+    .main__left__produtos {
+        margin-left: 35px;
+    }
+
+    .main__left, .main__right {
+        width: 48%; /* Mantém uma largura de 48% para duas colunas */
+    }
+
+    .main__right__title{
+        margin-top: 100px;
+        margin-right: 70px;
+    }
+
+    .card {
+        width: 100%; /* Mantém a largura dos cartões em tablets */
+        max-width: 250px; /* Ajusta a largura máxima dos cartões */
+    }
+
+    input[type="text"], input[type="number"], input[type="url"],
+    .custom-button, .custom-button__guardar {
+        font-size: 16px; /* Aumenta o tamanho da fonte para tablets */
+    }
+}
