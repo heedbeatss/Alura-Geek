@@ -27,12 +27,8 @@
                         <label for="preco"></label>
                         <input type="number" placeholder="preço..." id="preco" name="preco" step="0.01" required>
                         
-                        <label for="imagem"></label>
-                        <input type="file" id="imagem" name="imagem" accept="image/*" style="display:none;" required>
-                        <div class="custom-file-upload">
-                            <input type="text" id="file-placeholder" placeholder="imagem..." readonly>
-                            <button type="button" class="custom-button" onclick="document.getElementById('imagem').click();">Selecionar Imagem</button>
-                        </div>
+                        <label for="imagem-url"></label>
+                        <input type="url" placeholder="URL da imagem..." id="imagem-url" name="imagem-url" required>
                         
                         <div class="button-container">
                             <button type="submit" class="custom-button__guardar">Guardar</button>
@@ -53,9 +49,7 @@
             </div>    
         </div>
     </footer>
-    <script src="uploadImg.js"></script>
     <script src="js/js.js"></script>
     <script src="js/post.js"></script>
-    <script src="js/delete.js"></script>
 </body>
 </html>

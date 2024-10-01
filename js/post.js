@@ -1,46 +1,69 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Carregar produtos do localStorage ou do arquivo JSON
-    let products = JSON.parse(localStorage.getItem('products')) || [];
+    const form = document.querySelector('.form');
 
-    // Função para carregar os produtos do localStorage e do JSON
-    async function fetchProducts() {
+    // Função para enviar dados do formulário para a API
+    async function enviarProduto(event) {
+        event.preventDefault(); // Evita o envio padrão do formulário
+
+        const nome = document.getElementById('nome').value;
+        const preco = parseFloat(document.getElementById('preco').value);
+        const imagemURL = document.getElementById('imagem-url').value; // O URL da imagem que foi inserido
+
+        // Verifica se a URL da imagem não está vazia
+        if (!imagemURL) {
+            console.error('URL da imagem não fornecida.');
+            return;
+        }
+
+        // Obtém o último produto para gerar um novo ID
+        let novoId = 1; // Valor padrão para o novo ID
+
         try {
-            // Se não houver produtos no localStorage, busca do arquivo JSON
-            if (products.length === 0) {
-                const response = await fetch('./produtos.json');
-                if (!response.ok) {
-                    throw new Error('Não foi possível carregar os produtos. Código de status: ' + response.status);
-                }
-                const data = await response.json();
-                products = data.products;
-                localStorage.setItem('products', JSON.stringify(products));
+            const response = await fetch('http://localhost:3000/products');
+            if (!response.ok) {
+                throw new Error('Não foi possível obter os produtos. Código de status: ' + response.status);
             }
-            atualizarListaDeProdutos(products);
+
+            const produtos = await response.json();
+            if (produtos.length > 0) {
+                const ultimoProduto = produtos[produtos.length - 1];
+                novoId = Number(ultimoProduto.id) + 1; // Converte para número e incrementa
+            }
         } catch (error) {
-            console.error('Erro ao carregar os produtos:', error);
+            console.error('Erro ao obter produtos:', error);
+        }
+
+        const produto = {
+            id: novoId, // Adiciona o novo ID
+            name: nome,
+            price: preco,
+            image: imagemURL, // Usa a URL da imagem
+            alt: `Capa do produto ${nome}`
+        };
+
+        try {
+            const response = await fetch('http://localhost:3000/products', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(produto),
+            });
+
+            if (!response.ok) {
+                throw new Error('Não foi possível adicionar o produto. Código de status: ' + response.status);
+            }
+
+            // Atualiza a lista de produtos
+            fetchProducts(); 
+
+            // Limpa o formulário
+            form.reset();
+        } catch (error) {
+            console.error('Erro ao enviar o produto:', error);
         }
     }
 
-    // Atualiza a lista de produtos na página
-    function atualizarListaDeProdutos(products) {
-        const produtosContainer = document.querySelector('.main__left__produtos');
-        produtosContainer.innerHTML = ''; // Limpar o container de produtos
-        products.forEach(product => {
-            const card = `
-                <div class="card">
-                    <img src="${product.image}" alt="${product.alt}">
-                    <div class="card__container__info">
-                        <p class="card__container__value">${product.name}</p>
-                        <div class="card__container__svalue">
-                            <p>R$ ${product.price.toFixed(2)}</p>
-                        </div>
-                    </div>
-                </div>
-            `;
-            produtosContainer.insertAdjacentHTML('beforeend', card);
-        });
-    }
-
-    // Chama o fetch para carregar produtos
-    fetchProducts();
+    // Adiciona o evento de envio ao formulário
+    form.addEventListener('submit', enviarProduto);
 });

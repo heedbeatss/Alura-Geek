@@ -1,3 +1,5 @@
+// Função fetch para buscar (get) produtos da lista API
+
 async function fetchProducts() {
     try {
         const response = await fetch('http://localhost:3000/products'); // Caminho para a API REST
@@ -6,12 +8,16 @@ async function fetchProducts() {
         }
         const products = await response.json();  // A resposta já é um array de produtos
 
+        // Manipulação do DOM
+
         const produtosContainer = document.querySelector('.main__left__produtos');
         if (!produtosContainer) {
             throw new Error('Elemento .main__left__produtos não encontrado no DOM.');
         }
 
         produtosContainer.innerHTML = ''; // Limpa o conteúdo atual
+
+        // Exibir Produtos
 
         products.forEach(product => {
             const card = `
