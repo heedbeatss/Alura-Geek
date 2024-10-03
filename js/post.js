@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let novoId = 1; // Valor padrão para o novo ID
 
         try {
-            const response = await fetch('http://localhost:3000/products');
+            const response = await fetch('https://alura-geek-tytu.onrender.com/products');
             if (!response.ok) {
                 throw new Error('Não foi possível obter os produtos. Código de status: ' + response.status);
             }
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await fetch('http://localhost:3000/products', {
+            const response = await fetch('https://alura-geek-tytu.onrender.com/products', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -2,7 +2,7 @@
 
 async function fetchProducts() {
     try {
-        const response = await fetch('http://localhost:3000/products'); // Caminho para a API REST
+        const response = await fetch('https://alura-geek-tytu.onrender.com/products'); // Caminho para a API REST
         if (!response.ok) {
             throw new Error('Não foi possível carregar os produtos. Código de status: ' + response.status);
         }
