@@ -2,7 +2,7 @@
   "name": "json-server-app",
   "version": "1.0.0",
   "scripts": {
-    "start": "json-server --watch produtos.json --port $PORT"
+     "start": "json-server --watch produtos.json --port $PORT --host 0.0.0.0"
   },
   "dependencies": {
     "json-server": "^0.17.0"
