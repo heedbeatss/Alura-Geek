@@ -1,16 +1,10 @@
 {
-  "name": "alura-geek",
+  "name": "json-server-app",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "start:json-server": "json-server --watch produtos.json --port 3000",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "json-server --watch produtos.json --port 3000"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "json-server": "^1.0.0-beta.1"
+  "dependencies": {
+    "json-server": "^0.17.0"
   }
 }
